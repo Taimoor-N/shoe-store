@@ -1,9 +1,13 @@
 <resources>
+    <string name="content_desc_iv_welcome_logo">App Logo</string>
     <string name="hint_login_email">Enter Email</string>
     <string name="hint_login_password">Enter Password</string>
     <string name="app_name">ShoeStore</string>
     <string name="label_email">Email</string>
+    <string name="label_instructions">Instructions</string>
     <string name="label_login">Login</string>
     <string name="label_password">Password</string>
     <string name="label_sign_up">Sign Up</string>
+    <string name="text_welcome"><![CDATA[Welcome to S & T Shoes. Here you can explore some of the shoes that we offer, which can be purchased from any of our local store branches. You also have the option to add additional shoes so they can be reflected in our app.]]></string>
+    <string name="text_welcome_instructions">Instructions for using this app can be accessed below.</string>
 </resources>

@@ -4,6 +4,7 @@
     <!-- Application -->
     <dimen name="margin_default">16dp</dimen>
     <dimen name="margin_divider_vertical_default">32dp</dimen>
+    <dimen name="margin_large">32dp</dimen>
     <dimen name="padding_default">16dp</dimen>
     <dimen name="text_size_default">18sp</dimen>
 
