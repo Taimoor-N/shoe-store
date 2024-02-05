@@ -2,17 +2,24 @@
 <resources>
 
     <!-- Application -->
+    <dimen name="target_height_min">48dp</dimen>
     <dimen name="fab_elevation">6dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="fab_press_translation_z">6dp</dimen>
     <dimen name="fab_size">56dp</dimen>
     <dimen name="margin_default">16dp</dimen>
+    <dimen name="margin_default_half">8dp</dimen>
     <dimen name="margin_divider_vertical_default">32dp</dimen>
     <dimen name="margin_large">32dp</dimen>
     <dimen name="margin_small">12dp</dimen>
     <dimen name="padding_default">16dp</dimen>
+    <dimen name="padding_large">32dp</dimen>
+    <dimen name="text_padding_top">4dp</dimen>
     <dimen name="text_size_default">18sp</dimen>
     <dimen name="text_size_small">14sp</dimen>
+
+    <!-- Shoe Detail Fragment -->
+    <dimen name="shoe_detail_button_container_height">96dp</dimen>
 
     <!-- Shoe Listing Fragment -->
     <dimen name="shoe_listing_item_padding">12dp</dimen>
