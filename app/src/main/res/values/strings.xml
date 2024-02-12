@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+    <string name="content_desc_fab_shoe_listing">Add Shoe</string>
+    <string name="content_desc_iv_welcome_logo">App Logo</string>
+    <string name="content_desc_iv_shoe_listing_item">Shoe Image</string>
+    <string name="hint_login_email">Enter Email</string>
+    <string name="hint_login_password">Enter Password</string>
+    <string name="hint_shoe_company">Enter shoe company name</string>
+    <string name="hint_shoe_description">Enter description for the shoe</string>
+    <string name="hint_shoe_name">Enter the name of the shoe</string>
+    <string name="hint_shoe_size">Enter the shoe size</string>
+    <string name="label_cancel">Cancel</string>
+    <string name="label_email">Email</string>
+    <string name="label_instructions">Instructions</string>
+    <string name="label_login">Login</string>
+    <string name="label_password">Password</string>
+    <string name="label_save">Save</string>
+    <string name="label_shoe_list">Shoe List</string>
+    <string name="label_shoe_company">Company</string>
+    <string name="label_shoe_description">Description</string>
+    <string name="label_shoe_name">Name</string>
+    <string name="label_shoe_size">Size</string>
+    <string name="label_sign_up">Sign Up</string>
+    <string name="placeholder_shoe_listing_item_company">Company: Nike</string>
+    <string name="placeholder_shoe_listing_item_description">Description: Next Nature Running Shoes with 100% recycled laces</string>
+    <string name="placeholder_shoe_listing_item_name">Revolution X</string>
+    <string name="placeholder_shoe_listing_item_size">Size: 11</string>
+    <string name="text_instructions_1"><![CDATA[To access the list of available shoes in the app, click on the "Shoe List" button below, which will take you to the shoe listing screen.]]></string>
+    <string name="text_instructions_2"><![CDATA[Once in shoe listing screen, you will be able to see further details (or modify existing details) by clicking the shoe list item. You can also click the add button add a new shoe item to the list.]]></string>
+    <string name="text_welcome"><![CDATA[Welcome to S & T Shoes. Here you can explore some of the shoes that we offer, which can be purchased from any of our local store branches. You also have the option to add additional shoes so they can be reflected in our app.]]></string>
+    <string name="text_welcome_instructions">Instructions for using this app can be accessed below.</string>
 </resources>
