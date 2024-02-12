@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".ShoeListingItemFragment">
+    tools:context=".fragments.ShoeListingItemFragment">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_shoe_listing_item"

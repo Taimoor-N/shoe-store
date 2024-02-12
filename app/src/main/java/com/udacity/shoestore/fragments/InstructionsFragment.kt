@@ -1,12 +1,13 @@
-package com.udacity.shoestore
+package com.udacity.shoestore.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.udacity.shoestore.R
 
-class ShoeListingItemFragment : Fragment() {
+class InstructionsFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,7 +18,7 @@ class ShoeListingItemFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_shoe_listing_item, container, false)
+        return inflater.inflate(R.layout.fragment_instructions, container, false)
     }
 
 }
