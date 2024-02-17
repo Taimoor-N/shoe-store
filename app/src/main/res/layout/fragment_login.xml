@@ -1,101 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragments.LoginFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/tv_login_heading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/label_login"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.15" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.LoginFragment">
 
-    <TextView
-        android:id="@+id/tv_login_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:paddingStart="@dimen/padding_default"
-        android:paddingTop="@dimen/padding_default"
-        android:paddingEnd="@dimen/padding_default"
-        android:text="@string/label_email"
-        android:textSize="@dimen/text_size_default"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_login_heading" />
+        <TextView
+            android:id="@+id/tv_login_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_login"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.15" />
 
-    <EditText
-        android:id="@+id/et_login_email"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:autofillHints="emailAddress"
-        android:hint="@string/hint_login_email"
-        android:inputType="textEmailAddress"
-        android:minHeight="@dimen/target_height_min"
-        android:paddingStart="@dimen/padding_default"
-        android:paddingTop="@dimen/text_padding_top"
-        android:paddingEnd="@dimen/padding_default"
-        android:textSize="@dimen/text_size_default"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_login_email"
-        tools:ignore="VisualLintTextFieldSize" />
+        <TextView
+            android:id="@+id/tv_login_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:paddingStart="@dimen/padding_default"
+            android:paddingTop="@dimen/padding_default"
+            android:paddingEnd="@dimen/padding_default"
+            android:text="@string/label_email"
+            android:textSize="@dimen/text_size_default"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_login_heading" />
 
-    <TextView
-        android:id="@+id/tv_login_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingStart="@dimen/padding_default"
-        android:paddingTop="@dimen/padding_default"
-        android:paddingEnd="@dimen/padding_default"
-        android:text="@string/label_password"
-        android:textSize="@dimen/text_size_default"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_login_email" />
+        <EditText
+            android:id="@+id/et_login_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:autofillHints="emailAddress"
+            android:hint="@string/hint_login_email"
+            android:inputType="textEmailAddress"
+            android:minHeight="@dimen/target_height_min"
+            android:paddingStart="@dimen/padding_default"
+            android:paddingTop="@dimen/text_padding_top"
+            android:paddingEnd="@dimen/padding_default"
+            android:textSize="@dimen/text_size_default"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_login_email"
+            tools:ignore="VisualLintTextFieldSize" />
 
-    <EditText
-        android:id="@+id/et_login_password"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:autofillHints="password"
-        android:hint="@string/hint_login_password"
-        android:inputType="textPassword"
-        android:minHeight="@dimen/target_height_min"
-        android:paddingStart="@dimen/padding_default"
-        android:paddingTop="@dimen/text_padding_top"
-        android:paddingEnd="@dimen/padding_default"
-        android:textSize="@dimen/text_size_default"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_login_password"
-        tools:ignore="VisualLintTextFieldSize" />
+        <TextView
+            android:id="@+id/tv_login_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/padding_default"
+            android:paddingTop="@dimen/padding_default"
+            android:paddingEnd="@dimen/padding_default"
+            android:text="@string/label_password"
+            android:textSize="@dimen/text_size_default"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_login_email" />
 
-    <Button
-        android:id="@+id/btn_login_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="@string/label_login"
-        app:layout_constraintEnd_toStartOf="@+id/btn_login_sign_up"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_login_password"
-        tools:ignore="DuplicateSpeakableTextCheck" />
+        <EditText
+            android:id="@+id/et_login_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:autofillHints="password"
+            android:hint="@string/hint_login_password"
+            android:inputType="textPassword"
+            android:minHeight="@dimen/target_height_min"
+            android:paddingStart="@dimen/padding_default"
+            android:paddingTop="@dimen/text_padding_top"
+            android:paddingEnd="@dimen/padding_default"
+            android:textSize="@dimen/text_size_default"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_login_password"
+            tools:ignore="VisualLintTextFieldSize" />
 
-    <Button
-        android:id="@+id/btn_login_sign_up"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/label_sign_up"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_login_login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_login_login"
-        app:layout_constraintTop_toTopOf="@+id/btn_login_login" />
+        <Button
+            android:id="@+id/btn_login_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="@string/label_login"
+            app:layout_constraintEnd_toStartOf="@+id/btn_login_sign_up"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_login_password"
+            tools:ignore="DuplicateSpeakableTextCheck" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/btn_login_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_sign_up"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_login_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_login_login"
+            app:layout_constraintTop_toTopOf="@+id/btn_login_login" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
