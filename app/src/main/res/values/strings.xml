@@ -30,6 +30,7 @@
     <string name="text_instructions_2"><![CDATA[Once in shoe listing screen, you will be able to see further details (or modify existing details) by clicking the shoe list item. You can also click the add button add a new shoe item to the list.]]></string>
     <string name="text_shoe_company_format">Company: %s</string>
     <string name="text_shoe_description_format">Description: %s</string>
+    <string name="text_shoe_size">%.1f</string>
     <string name="text_shoe_size_format">Size: %.1f</string>
     <string name="text_welcome"><![CDATA[Welcome to S & T Shoes. Here you can explore some of the shoes that we offer, which can be purchased from any of our local store branches. You also have the option to add additional shoes so they can be reflected in our app.]]></string>
     <string name="text_welcome_instructions">Instructions for using this app can be accessed below.</string>

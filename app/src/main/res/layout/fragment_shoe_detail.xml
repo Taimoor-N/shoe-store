@@ -3,6 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -67,6 +74,7 @@
                     android:paddingTop="@dimen/text_padding_top"
                     android:paddingEnd="@dimen/padding_default"
                     android:paddingBottom="@dimen/padding_default"
+                    android:text="@{shoe.name}"
                     android:textSize="@dimen/text_size_default"
                     tools:ignore="VisualLintTextFieldSize" />
 
@@ -92,7 +100,7 @@
                     android:paddingTop="@dimen/text_padding_top"
                     android:paddingEnd="@dimen/padding_default"
                     android:paddingBottom="@dimen/padding_default"
-                    android:text=""
+                    android:text="@{shoe.company}"
                     android:textSize="@dimen/text_size_default"
                     tools:ignore="VisualLintTextFieldSize" />
 
@@ -118,7 +126,7 @@
                     android:paddingTop="@dimen/text_padding_top"
                     android:paddingEnd="@dimen/padding_default"
                     android:paddingBottom="@dimen/padding_default"
-                    android:text=""
+                    android:text="@{@string/text_shoe_size(shoe.size)}"
                     android:textSize="@dimen/text_size_default"
                     tools:ignore="VisualLintTextFieldSize" />
 
@@ -136,14 +144,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
+                    android:gravity="top|start"
                     android:hint="@string/hint_shoe_description"
                     android:importantForAutofill="no"
-                    android:inputType="text"
+                    android:inputType="textMultiLine"
                     android:minHeight="@dimen/target_height_min"
+                    android:minLines="4"
                     android:paddingStart="@dimen/padding_default"
                     android:paddingTop="@dimen/text_padding_top"
                     android:paddingEnd="@dimen/padding_default"
                     android:paddingBottom="@dimen/padding_default"
+                    android:scrollbars="none"
+                    android:text="@{shoe.description}"
                     android:textSize="@dimen/text_size_default"
                     tools:ignore="VisualLintTextFieldSize" />
 

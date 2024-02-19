@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.res.ResourcesCompat
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListingItemBinding
 import com.udacity.shoestore.models.Shoe
@@ -31,6 +32,7 @@ class ShoeListingItemFragment : Fragment() {
         mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_listing_item, container, false)
         mBinding.shoe = mShoe
         setShoeImage()
+        setOnClickListeners()
         return mBinding.root
     }
 
@@ -40,6 +42,12 @@ class ShoeListingItemFragment : Fragment() {
             val imageUri = shoe.images.first()
             val imageResource = resources.getIdentifier(imageUri, null, activity?.packageName)
             mBinding.ivShoeListingItem.setImageDrawable(ResourcesCompat.getDrawable(resources, imageResource, null))
+        }
+    }
+
+    private fun setOnClickListeners() {
+        mBinding.layoutShoeListingItem.setOnClickListener { view: View ->
+            view.findNavController().navigate(ShoeListingFragmentDirections.actionShoeListingFragmentToShoeDetailFragment(mShoe))
         }
     }
 
