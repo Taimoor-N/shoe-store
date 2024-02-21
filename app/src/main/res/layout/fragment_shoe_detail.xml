@@ -6,8 +6,8 @@
     <data>
 
         <variable
-            name="shoe"
-            type="com.udacity.shoestore.models.Shoe" />
+            name="shoeListingViewModel"
+            type="com.udacity.shoestore.viewmodels.ShoeListingViewModel" />
     </data>
 
     <!-- Used ConstraintLayout due to complexity (both vertical and horizontal arrangements) -->
@@ -75,7 +75,7 @@
                     android:paddingTop="@dimen/text_padding_top"
                     android:paddingEnd="@dimen/padding_default"
                     android:paddingBottom="@dimen/padding_default"
-                    android:text="@{shoe.name}"
+                    android:text="@={shoeListingViewModel.selectedShoeLiveData.name}"
                     android:textSize="@dimen/text_size_default"
                     tools:ignore="VisualLintTextFieldSize" />
 
@@ -101,7 +101,7 @@
                     android:paddingTop="@dimen/text_padding_top"
                     android:paddingEnd="@dimen/padding_default"
                     android:paddingBottom="@dimen/padding_default"
-                    android:text="@{shoe.company}"
+                    android:text="@={shoeListingViewModel.selectedShoeLiveData.company}"
                     android:textSize="@dimen/text_size_default"
                     tools:ignore="VisualLintTextFieldSize" />
 
@@ -127,7 +127,7 @@
                     android:paddingTop="@dimen/text_padding_top"
                     android:paddingEnd="@dimen/padding_default"
                     android:paddingBottom="@dimen/padding_default"
-                    android:text="@{@string/text_shoe_size(shoe.size)}"
+                    android:text="@={`` + shoeListingViewModel.selectedShoeLiveData.size}"
                     android:textSize="@dimen/text_size_default"
                     tools:ignore="VisualLintTextFieldSize" />
 
@@ -156,7 +156,7 @@
                     android:paddingEnd="@dimen/padding_default"
                     android:paddingBottom="@dimen/padding_default"
                     android:scrollbars="none"
-                    android:text="@{shoe.description}"
+                    android:text="@={shoeListingViewModel.selectedShoeLiveData.description}"
                     android:textSize="@dimen/text_size_default"
                     tools:ignore="VisualLintTextFieldSize" />
 
