@@ -11,22 +11,43 @@ import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Lifecycle
 import androidx.navigation.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListingBinding
+import com.udacity.shoestore.models.Shoe
+import com.udacity.shoestore.viewmodels.MainActivityViewModel
 
 class ShoeListingFragment : Fragment() {
 
+    private lateinit var mBinding: FragmentShoeListingBinding
+
+    private val mViewModel: MainActivityViewModel by activityViewModels()
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
-        val binding: FragmentShoeListingBinding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_shoe_listing, container, false)
-        binding.fabShoeListingAddShoe.setOnClickListener { view: View ->
-            view.findNavController().navigate(ShoeListingFragmentDirections.actionShoeListingFragmentToShoeDetailFragment())
+        mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_listing,
+            container, false)
+
+        // Specify the current activity as the lifecycle owner of the binding. This is used so that
+        // the binding can observe LiveData updates
+        mBinding.lifecycleOwner = this
+
+        mBinding.fabShoeListingAddShoe.setOnClickListener { view: View ->
+            view.findNavController().navigate(ShoeListingFragmentDirections.actionShoeListingFragmentToShoeDetailFragment(null))
         }
+
+        // Observe shoesLiveData and recreate the shoe list upon any changes
+        mViewModel.shoesLiveData.observe(viewLifecycleOwner) { shoes ->
+            mBinding.llShoeListing.removeAllViews()
+            for (shoe in shoes) {
+                createAndAddShoeListingItemFragment(shoe)
+            }
+        }
+
         addMenuItems()
-        return binding.root
+        return mBinding.root
     }
 
     private fun addMenuItems() {
@@ -49,6 +70,13 @@ class ShoeListingFragment : Fragment() {
                 }
             }
         }, viewLifecycleOwner, Lifecycle.State.RESUMED)
+    }
+
+    private fun createAndAddShoeListingItemFragment(shoe: Shoe) {
+        val fragmentTransaction = parentFragmentManager.beginTransaction()
+        val shoeListingItemFragment = ShoeListingItemFragment().newInstance(shoe)
+        fragmentTransaction.add(mBinding.llShoeListing.id, shoeListingItemFragment, "ShoeListingItemFragment")
+        fragmentTransaction.commit()
     }
 
 }
