@@ -12,6 +12,8 @@ import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListingItemBinding
 import com.udacity.shoestore.models.Shoe
 
+const val KEY_SHOE = "key_shoe"
+
 class ShoeListingItemFragment : Fragment() {
 
     private lateinit var mShoe: Shoe
@@ -25,6 +27,12 @@ class ShoeListingItemFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        if (savedInstanceState != null) {
+            val shoe: Shoe? = savedInstanceState.getParcelable(KEY_SHOE)
+            if (shoe != null) {
+                mShoe = shoe
+            }
+        }
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -34,6 +42,11 @@ class ShoeListingItemFragment : Fragment() {
         setShoeImage()
         setOnClickListeners()
         return mBinding.root
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putParcelable(KEY_SHOE, mShoe)
     }
 
     private fun setShoeImage() {

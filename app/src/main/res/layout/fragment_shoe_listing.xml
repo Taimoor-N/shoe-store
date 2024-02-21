@@ -11,6 +11,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <!-- Used LinearLayout since all views are aligned in a single (vertical) direction -->
             <LinearLayout
                 android:id="@+id/ll_shoe_listing"
                 android:layout_width="match_parent"
