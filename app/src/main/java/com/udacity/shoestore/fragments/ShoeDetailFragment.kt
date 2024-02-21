@@ -58,7 +58,12 @@ class ShoeDetailFragment : Fragment() {
     private fun setShoeFromBinding() {
         mShoe.name = mBinding.etShoeDetailName.text.toString()
         mShoe.company = mBinding.etShoeDetailCompany.text.toString()
-        mShoe.size = mBinding.etShoeDetailSize.text.toString().toDouble()
+        val shoeSizeString = mBinding.etShoeDetailSize.text.toString()
+        if (shoeSizeString.isNotEmpty()) {
+            mShoe.size = shoeSizeString.toDouble()
+        } else {
+            mShoe.size = 0.0
+        }
         mShoe.description = mBinding.etShoeDetailDescription.text.toString()
     }
 
