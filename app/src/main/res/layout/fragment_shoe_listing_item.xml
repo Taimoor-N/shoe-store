@@ -10,6 +10,7 @@
             type="com.udacity.shoestore.models.Shoe" />
     </data>
 
+    <!-- Used ConstraintLayout due to complexity (both vertical and horizontal arrangements) -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_shoe_listing_item"
         android:layout_width="match_parent"

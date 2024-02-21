@@ -1,60 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context=".fragments.InstructionsFragment">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/tv_instructions_heading"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/margin_large"
-            android:text="@string/label_instructions"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/tv_instructions_1"
+        <!-- Used LinearLayout since all views are aligned in a single direction (vertically) -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_default"
-            android:layout_marginTop="@dimen/margin_large"
-            android:layout_marginEnd="@dimen/margin_default"
-            android:text="@string/text_instructions_1"
-            android:textSize="@dimen/text_size_default"
-            app:layout_constraintTop_toBottomOf="@+id/tv_instructions_heading"
-            tools:ignore="VisualLintLongText" />
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tv_instructions_2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_default"
-            android:layout_marginTop="@dimen/margin_large"
-            android:layout_marginEnd="@dimen/margin_default"
-            android:text="@string/text_instructions_2"
-            android:textSize="@dimen/text_size_default"
-            app:layout_constraintTop_toBottomOf="@+id/tv_instructions_1"
-            tools:ignore="VisualLintLongText" />
+            <TextView
+                android:id="@+id/tv_instructions_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_large"
+                android:text="@string/label_instructions"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/btn_instructions_shoe_listing"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_large"
-            android:text="@string/label_shoe_list"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/tv_instructions_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:text="@string/text_instructions_1"
+                android:textSize="@dimen/text_size_default"
+                tools:ignore="VisualLintLongText" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/tv_instructions_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:text="@string/text_instructions_2"
+                android:textSize="@dimen/text_size_default"
+                tools:ignore="VisualLintLongText" />
+
+            <Button
+                android:id="@+id/btn_instructions_shoe_listing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_large"
+                android:text="@string/label_shoe_list" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </layout>
