@@ -5,9 +5,13 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.udacity.shoestore.models.Shoe
 
-class MainActivityViewModel : ViewModel() {
+class ShoeListingViewModel : ViewModel() {
 
     private var mSelectedShoeIndex = -1
+
+    private val mSelectedShoeLiveData = MutableLiveData<Shoe>()
+    val selectedShoeLiveData: LiveData<Shoe>
+        get() = mSelectedShoeLiveData
 
     private val mShoesLiveData = MutableLiveData<ArrayList<Shoe>>()
     val shoesLiveData: LiveData<ArrayList<Shoe>>
@@ -25,29 +29,27 @@ class MainActivityViewModel : ViewModel() {
         mShoesLiveData.notifyObserver()
     }
 
-    fun addOrUpdateSelectedShoe(shoe: Shoe) {
+    fun addOrUpdateSelectedShoe() {
         if (mSelectedShoeIndex > -1) {
-            mShoesLiveData.value?.set(mSelectedShoeIndex, shoe)
+            mSelectedShoeLiveData.value?.let { mShoesLiveData.value?.set(mSelectedShoeIndex, it) }
             resetSelectedShoeIndex()
         } else {
-            addShoe(shoe)
+            mSelectedShoeLiveData.value?.let { addShoe(it) }
         }
     }
 
-    fun initializeSelectedShoe(shoe: Shoe?) : Shoe {
-        val selectedShoe: Shoe
+    fun initializeSelectedShoe(shoe: Shoe?) {
         if (shoe == null) {
-            selectedShoe = Shoe("", 0.0, "", "", listOf(getRandomShoeImg()))
+            mSelectedShoeLiveData.value = Shoe("", 0.0, "", "", listOf(getRandomShoeImg()))
             resetSelectedShoeIndex()
         } else {
+            mSelectedShoeLiveData.value = shoe.copy()
             // Check if shoe exists in mShoesLiveData
             val index = mShoesLiveData.value?.indexOf(shoe)
             if (index != null && index > -1) {
                 mSelectedShoeIndex = index
             }
-            selectedShoe = shoe
         }
-        return selectedShoe
     }
 
     private fun createInitialListOfShoes() {

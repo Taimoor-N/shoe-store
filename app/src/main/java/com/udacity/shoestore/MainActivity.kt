@@ -9,12 +9,12 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.udacity.shoestore.databinding.ActivityMainBinding
-import com.udacity.shoestore.viewmodels.MainActivityViewModel
+import com.udacity.shoestore.viewmodels.ShoeListingViewModel
 import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {
 
-    private val mViewModel: MainActivityViewModel by viewModels()
+    private val mViewModel: ShoeListingViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

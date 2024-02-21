@@ -17,13 +17,13 @@ import androidx.navigation.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListingBinding
 import com.udacity.shoestore.models.Shoe
-import com.udacity.shoestore.viewmodels.MainActivityViewModel
+import com.udacity.shoestore.viewmodels.ShoeListingViewModel
 
 class ShoeListingFragment : Fragment() {
 
     private lateinit var mBinding: FragmentShoeListingBinding
 
-    private val mViewModel: MainActivityViewModel by activityViewModels()
+    private val mViewModel: ShoeListingViewModel by activityViewModels()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
